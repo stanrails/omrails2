@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150905022142) do
+ActiveRecord::Schema.define(version: 20150905152229) do
 
   create_table "discipleship_classes", force: :cascade do |t|
     t.date     "class_date"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20150905022142) do
     t.integer  "user_id"
   end
 
+  add_index "discipleship_classes", ["user_id", "created_at"], name: "index_discipleship_classes_on_user_id_and_created_at"
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "email"
@@ -28,9 +30,10 @@ ActiveRecord::Schema.define(version: 20150905022142) do
     t.string   "children"
     t.string   "mom"
     t.string   "dad"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.string   "last_name"
+    t.integer  "{:index=>true, :foreign_key=>true}_id"
   end
 
 end
