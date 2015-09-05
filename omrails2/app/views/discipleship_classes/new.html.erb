@@ -1,5 +1,13 @@
-<h1>New Discipleship Class</h1>
+<div id="main-container" class="container-fluid">
+  <div class="row">
+	    <div id="sidebar" class="col-xs-2">
+	    <h3>Sidebar</h3>
+	    </div>
+	    <h1>Add Discipleship Class</h1>
+	    <div id="main-content" class="col-xs-10">
+				<%= render 'form', role: 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', discipleship_classes_path %>
+				<%= link_to 'Back', discipleship_classes_path %>
+		</div>
+	</div>
+</div>
