@@ -6,6 +6,8 @@ body {
   line-height: 18px;
 }
 
+
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -70,4 +72,7 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+.navbar-brand {
+height:80px !important;
 }

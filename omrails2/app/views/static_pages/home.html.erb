@@ -1,2 +1,43 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<body>
+	<div class="site-wrapper">
+		<div class="site-wrapper-inner">
+			 <div class="cover-container">
+
+				  <div class="inner cover">
+				            <h1 class="cover-heading">A Better Way to Disciple</h1>
+				            <p class="lead">Know more about our Church family.</p>
+				            
+				  </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <%= image_tag "worship_circle.png" %>
+          <h2>Attenders</h2>
+          <p>View church attender profiles</p>
+          <p><%= link_to "View Attenders", attenders_path, class: 'btn btn-default' %></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <%= image_tag "classes_circle.png" %>
+          <h2>Classes</h2>
+          <p>Review discipleship class details</p>
+          <p><%= link_to "View Classes", classes_path, class: 'btn btn-default' %></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <%= image_tag "teacher_circle.png" %>
+          <h2>Teachers</h2>
+          <p>Review teacher profiles</p>
+          <p><a class="btn btn-default" href="#" role="button">Coming Soon &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+		<div class="mastfoot">
+            <div class="inner">
+              <p>Monroe Church of the Nazarene</p>
+            </div>
+        </div>
+		      
+			</div>
+		</div>
+	</div>
+</body>
