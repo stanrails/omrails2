@@ -2,9 +2,14 @@
 
 <div id="main-container" class="container-fluid">
   <div class="row">
-    <div id="sidebar" class="col-xs-3">
-    <h3>Sidebar</h3>
-    </div>
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><span class="sr-only">(current)</span><%= link_to "All Classes", classes_path %></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+        </div>
         <div id="main-content" class="col-xs-9">
             <h1>Discipleship Classes</h1>
             <table class="table table-bordered table-striped">
@@ -31,7 +36,7 @@
 
             <br>
 
-            <%= link_to 'New Discipleship class', new_discipleship_class_path %>
+            <%= link_to 'Add New Discipleship Class', new_discipleship_class_path,  class: 'btn btn-success'%>
         </div>
       </div>
     </div>
