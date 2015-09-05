@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Class date:</strong>
+  <%= @discipleship_class.class_date %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @discipleship_class.title %>
+</p>
+
+<p>
+  <strong>ID:</strong>
+  <%= @discipleship_class.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_discipleship_class_path(@discipleship_class) %> |
+<%= link_to 'Back', discipleship_classes_path %>
