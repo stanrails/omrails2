@@ -1,19 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div id="main-container" style="text-align:left;" class="container-fluid">
+	<div class="row">
+	    <div class="col-sm-3 col-md-2 sidebar">
+	      <ul class="nav nav-sidebar">
+	        <li class="active"><span class="sr-only">(current)</span><%= link_to "All Attenders", attenders_path %></li>
+	        <li><a href="#">Reports</a></li>
+	        <li><a href="#">Analytics</a></li>
+	        <li><a href="#">Export</a></li>
+	      </ul>
+	    </div>
+	    <div id="main-content" class="col-xs-10">
+			<p id="notice"><%= notice %></p>
+			<p>
+			  <strong>Class date:</strong>
+			  <%= @discipleship_class.class_date %>
+			</p>
+			<p>
+			  <strong>Title:</strong>
+			  <%= @discipleship_class.title %>
+			</p>
+			<p>
+			  <strong>ID:</strong>
+			  <%= @discipleship_class.user_id %>
+			</p>
 
-<p>
-  <strong>Class date:</strong>
-  <%= @discipleship_class.class_date %>
-</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @discipleship_class.title %>
-</p>
 
-<p>
-  <strong>ID:</strong>
-  <%= @discipleship_class.user_id %>
-</p>
 
-<%= link_to 'Edit', edit_discipleship_class_path(@discipleship_class) %> |
-<%= link_to 'Back', discipleship_classes_path %>
+			<%= link_to 'Edit', edit_discipleship_class_path(@discipleship_class), class: 'btn btn-default' %> |
+			<%= link_to 'Back', discipleship_classes_path, class: 'btn btn-default' %>
+		</div>
+	</div>
+</div>
+
+

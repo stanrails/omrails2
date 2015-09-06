@@ -1,39 +1,59 @@
-<p id="notice"><%= notice %></p>
+<div id="main-container" style="text-align:left;" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar"><br>
 
-<p>
-  <strong>First Name:</strong>
-  <%= @user.first_name %>
-</p>
+        <li><strong>Quick Stats</strong></li>
+        <li>Classes Attended: <%= @user.discipleship_classes.count %></li>
+      </ul>
+    </div>
+    <div id="main-content" class="col-xs-10">
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Last Name:</strong>
-  <%= @user.last_name %>
-</p>
+      <p>
+        <strong>First Name:</strong>
+        <%= @user.first_name %>
+      </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+      <p>
+        <strong>Last Name:</strong>
+        <%= @user.last_name %>
+      </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @user.phone %>
-</p>
+      <p>
+        <strong>Email:</strong>
+        <%= @user.email %>
+      </p>
 
-<p>
-  <strong>Children:</strong>
-  <%= @user.children %>
-</p>
+      <p>
+        <strong>Phone:</strong>
+        <%= @user.phone %>
+      </p>
 
-<p>
-  <strong>Mom:</strong>
-  <%= @user.mom %>
-</p>
+      <p>
+        <strong>Children:</strong>
+        <%= @user.children %>
+      </p>
 
-<p>
-  <strong>Dad:</strong>
-  <%= @user.dad %>
-</p>
+      <p>
+        <strong>Mom:</strong>
+        <%= @user.mom %>
+      </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+      <p>
+        <strong>Dad:</strong>
+        <%= @user.dad %>
+      </p>
+    <% if @user.discipleship_classes.any? %>
+      <h3>Discipleship Classes </h3>
+      <ol class="classes">
+        <%= render @discipleship_classes %>
+      </ol>
+      <%= will_paginate @discipleship_classes %>
+    <% end %>
+
+      <%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-default' %> |
+      <%= link_to 'Back', users_path, class: 'btn btn-default' %>
+
+  </div>
+</div>

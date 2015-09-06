@@ -1,0 +1,7 @@
+<li id="discipleship_class-<%= discipleship_class.id %>">
+ 
+  <span class="content"><%= link_to discipleship_class.title, discipleship_class %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(discipleship_class.created_at) %> ago.
+  </span>
+</li>

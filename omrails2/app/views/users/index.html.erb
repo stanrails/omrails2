@@ -10,9 +10,10 @@
         <li><a href="#">Export</a></li>
       </ul>
     </div>
-    <div id="main-content" class="col-xs-10">
+    <div id="main-content" class="col-xs-10" style="text-align:left;">
 
         <h1>Monroe Nazarene Attenders</h1>
+        <%= will_paginate %>
 
         <table class="table table-bordered table-striped">
           <thead>
@@ -47,10 +48,8 @@
             <% end %>
           </tbody>
         </table>
-
-        <br>
-
-        <%= link_to 'Add Another Attender', new_user_path, class: 'btn btn-success' %>
+        <p><%= link_to 'Add Another Attender', new_user_path, class: 'btn btn-success' %></p>
+        <%= will_paginate %>
   </div>
 </div>
 </div>

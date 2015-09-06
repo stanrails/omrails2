@@ -10,6 +10,7 @@ class DiscipleshipClassesController < ApplicationController
   # GET /discipleship_classes/1
   # GET /discipleship_classes/1.json
   def show
+
   end
 
   # GET /discipleship_classes/new
